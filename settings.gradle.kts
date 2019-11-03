@@ -27,6 +27,7 @@ pluginManagement {
     repositories {
         google()
         mavenCentral()
+        maven(url = "https://dl.bintray.com/kotlin/kotlin-eap")
         maven(url = "https://plugins.gradle.org/m2/")
         maven(url = "https://dl.bintray.com/jetbrains/kotlin-native-dependencies")
         jcenter()

@@ -15,17 +15,18 @@
  */
 
 plugins {
-    kotlin("multiplatform").version("1.3.50").apply(false)
+    kotlin("multiplatform").version("1.3.60-eap-76").apply(false)
     id("com.android.library").version("3.4.1").apply(false)
 }
 
 subprojects {
     group = "com.russhwolf"
-    version = "0.3.3"
+    version = "0.3.3-1.3.60-eap-76"
 
     repositories {
         google()
         jcenter()
+        maven(url = "https://dl.bintray.com/kotlin/kotlin-eap")
     }
 
     tasks.withType(AbstractTestTask::class) {

@@ -143,3 +143,17 @@ task("iosTest") {
     }
 }
 tasks["allTests"].dependsOn("iosTest")
+
+publishing {
+    repositories {
+        maven {
+            name = "bintray"
+            url = uri("https://api.bintray.com/maven/icerockdev/kotlin-libs/multiplatform-settings/;publish=1")
+
+            credentials {
+                username = System.getProperty("BINTRAY_USER")
+                password = System.getProperty("BINTRAY_KEY")
+            }
+        }
+    }
+}
